@@ -12,20 +12,23 @@ function plugin_init_gamification() {
 
    //required!
    $PLUGIN_HOOKS['csrf_compliant']['gamification'] = true;
+   
+   Plugin::registerClass('PluginGamificationScore');
+   Plugin::registerClass('PluginCustomfieldsDropdowns');
 
-   // $PLUGIN_HOOKS['item_add']['gamification']        = ['Computer' => ['PluginExampleExample',
-   //                                                               'item_add_test']];
-   
-   
    $PLUGIN_HOOKS['item_update']['gamification']     = ['Ticket' => 'plugin_add_score',
    'TicketSatisfaction' => 'plugin_add_score_satisfaction'];
-
-   $PLUGIN_HOOKS['display_central']['gamification'] = "plugin_example_display_central";
    
-   // $PLUGIN_HOOKS['item_update']['gamification']     = ['TicketSatisfaction' => 'plugin_add_score_satisfaction'];
+   $PLUGIN_HOOKS['item_update']['gamification']     = ['TicketSatisfaction' => 'plugin_add_score_satisfaction'];
 
    if (Session::haveRight('config', UPDATE)) {
       $PLUGIN_HOOKS['config_page']['gamification'] = 'config.php';
+   }
+
+   $_SESSION["glpi_plugin_gamification_profile"]['gamification'] = 'w';
+
+   if (isset($_SESSION["glpi_plugin_gamification_profile"])) {
+      $PLUGIN_HOOKS['menu_toadd']['gamification'] = ['management'   => 'PluginGamificationScore'];
    }
 
    $PLUGIN_HOOKS['add_css']['gamification']        = 'style.css';

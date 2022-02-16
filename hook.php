@@ -109,7 +109,7 @@ function plugin_add_score_satisfaction($item)
    if (!empty($item->oldvalues)) {
       foreach ($item->oldvalues as $key => $value) {
          if (empty($value)) {
-            if($key == 'satisfaction'){
+            if ($key == 'satisfaction') {
                $empty++;
             }
          }
@@ -180,14 +180,9 @@ function plugin_get_configs()
    $query = "SELECT * FROM glpi_plugin_gamification_configs gpgc";
    $return = $DB->query($query) or die("error" . $DB->error());
 
-   return ($DB->fetchArray($return));
+   return ($DB->fetch_row($return));
 }
 
-function plugin_get_rank($score)
-{
-   $config = plugin_get_configs();
-
-}
 function plugin_check_time($item, $config)
 {
 
@@ -242,31 +237,4 @@ function plugin_get_user_by_ticket_id($ticket_id)
       ";
    $return = $DB->query($query) or die("error" . $DB->error());
    return ($DB->fetchArray($return));
-}
-
-function plugin_example_display_central($item) 
-{
-   global $DB;
-
-   $query = "
-      select gpgs.score from glpi_plugin_gamification_score gpgs 
-      where user_id = ".Session::getLoginUserID()."";
-
-   $return = $DB->query($query) or die("error" . $DB->error());
-   $data = $DB->fetchArray($return);
-
-   // $config = plugin_get_configs();
-   // echo '<pre>';
-   // var_dump($config);
-//    foreach($config as $key=>$value) {
-//       var_dump($value);
-//   }
-//   echo '</pre>';
-   // var_dump($config["agent_fast_ticket_solve"]);
-   // die;
-   echo "<tr><th colspan='2'>";
-   echo "<div style='text-align:center; font-size:2em'>";
-   echo __("Score: ".$data['score']);
-   echo "</div>";
-   echo "</th></tr>";
 }
