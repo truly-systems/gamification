@@ -91,13 +91,13 @@ if (PluginGamificationScore::canView()) {
                   </tr>
                   <tr>
                      <th class="bg-white">
-                        <label>Fast (<1h)</label>
+                        <label>Points: </label>
                      </th>
                      <td>
                         <input style="font-weight: bold" disabled value="<?php echo get_points() ?>" type="text">
                      </td>
                      <th class="bg-white">
-                        <label>On Time</label>
+                        <label>Rank: </label>
                      </th>
                      <td>
                         <input style="font-weight: bold" disabled value="<?php echo plugin_check_score(get_points()) ?>" name="late" type="text">
