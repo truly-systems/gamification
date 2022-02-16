@@ -1,5 +1,5 @@
 # gamefication
-GLPI Plugin for Gamefication
+GLPI Plugin for Gamification
 
 This plugin is very easy to use
 
