@@ -1,15 +1,14 @@
-  <root>
+<root>
             <name>Gamification</name>
             <key>gamification</key>
-            <state>beta</state> <!-- stable | unstable | beta | alpha -->
+            <state>beta</state>
             <logo>https://github.com/truly-systems/gamification/blob/b03cce4129c20bc7cb02476619b56cdd07e51045/logo.png</logo>
             <description>
                <short>
                   <en>Plugin for gamification inside glpi tickets</en>                  
                </short>
                <long>
-                  <en>This plugin enable gamification inside glpi, based on survey and time</en>
-                  <lang>...</lang>
+                  <en>This plugin enable gamification inside glpi, based on survey and time</en>                 
                </long>
             </description>
             <homepage>https://github.com/truly-systems/gamification</homepage>
@@ -22,7 +21,7 @@
             <versions>
                <version>
                   <num>1.0</num>
-                  <compatibility>~9.5.0</compatibility>
+                  <compatibility>>=9.5.0</compatibility>
                   <download_url>https://github.com/truly-systems/gamification/releases</download_url>
                </version>
             </versions>
@@ -42,4 +41,4 @@
                <screenshot>https://user-images.githubusercontent.com/94056915/154176285-cf38bdef-7104-4da3-a931-effcefa03d30.png</screenshot>
                <screenshot>https://user-images.githubusercontent.com/94056915/154176653-868f3e29-21f2-4384-ab3a-f3c07ca8b7e0.png</screenshot>               
             </screenshots>
-         </root>
+</root>
