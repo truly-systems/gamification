@@ -1,0 +1,45 @@
+  <root>
+            <name>Gamification</name>
+            <key>gamification</key>
+            <state>beta</state> <!-- stable | unstable | beta | alpha -->
+            <logo>https://github.com/truly-systems/gamification/blob/b03cce4129c20bc7cb02476619b56cdd07e51045/logo.png</logo>
+            <description>
+               <short>
+                  <en>Plugin for gamification inside glpi tickets</en>                  
+               </short>
+               <long>
+                  <en>This plugin enable gamification inside glpi, based on survey and time</en>
+                  <lang>...</lang>
+               </long>
+            </description>
+            <homepage>https://github.com/truly-systems/gamification</homepage>
+            <download>https://github.com/truly-systems/gamification</download>
+            <issues>https://github.com/truly-systems/gamification/issues</issues>
+            <readme>https://github.com/truly-systems/gamification/blob/main/README.md</readme>
+            <authors>
+               <author>Truly Systems</author>
+            </authors>
+            <versions>
+               <version>
+                  <num>1.0</num>
+                  <compatibility>~9.5.0</compatibility>
+                  <download_url>https://github.com/truly-systems/gamification/releases</download_url>
+               </version>
+            </versions>
+            <langs>
+               <lang>en_US</lang>              
+            </langs>
+            <license>GPL v3</license>
+            <tags>
+               <en>
+                  <tag>gamification</tag>
+               </en>
+               <lang>
+                  <tag>users</tag>
+               </lang>
+            </tags>
+            <screenshots>
+               <screenshot>https://user-images.githubusercontent.com/94056915/154176285-cf38bdef-7104-4da3-a931-effcefa03d30.png</screenshot>
+               <screenshot>https://user-images.githubusercontent.com/94056915/154176653-868f3e29-21f2-4384-ab3a-f3c07ca8b7e0.png</screenshot>               
+            </screenshots>
+         </root>
